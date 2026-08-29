@@ -59,3 +59,5 @@ const discoverContent={
  champions:{title:'نصائح من الأبطال',text:'مكتبة قصيرة مبنية على عقلية المنافسة، ويمكن لاحقاً ربط كل بطاقة ببطل حقيقي من النادي بعد توثيق الاسم والبطولة.',points:[['قبل المنافسة','استعد لما يمكنك التحكم فيه.'],['بعد الخسارة','حلل الأداء ثم عد للتدريب.'],['بعد الفوز','احفظ التواضع وواصل البناء.']]}
 };
 document.querySelectorAll('[data-content]').forEach(b=>b.onclick=()=>{const d=discoverContent[b.dataset.content];$('discoverPanel').innerHTML='<h3>'+d.title+'</h3><p>'+d.text+'</p><div class="discover-points">'+d.points.map(x=>'<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div>';$('discoverPanel').classList.add('show');$('discoverPanel').scrollIntoView({behavior:'smooth',block:'nearest'})});
+
+document.querySelectorAll('[data-hub]').forEach(card=>card.addEventListener('click',()=>{const target=document.querySelector(card.dataset.hub);if(target){target.scrollIntoView({behavior:'smooth',block:'start'});target.classList.remove('hub-focus');void target.offsetWidth;target.classList.add('hub-focus')}}));
