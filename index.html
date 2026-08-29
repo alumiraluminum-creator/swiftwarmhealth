@@ -1,60 +1,127 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Swiftwarm Sports Health — منصة رياضية تفاعلية لأعضاء نادي التوفيقية للتنس." />
-  <title>Swiftwarm Sports Health</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { colors: {
-        ink: '#061622', navy: '#0B2335', panel: '#102F43', mint: '#28C7B5', gold: '#D6A63A', lilac: '#8D7BFF'
-      }, fontFamily: { sans: ['Tahoma', 'Arial', 'sans-serif'] } } }
-    }
-  </script>
-  <link rel="stylesheet" href="./styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07131d">
+  <meta name="description" content="SwiftWarm Sports — تجربة رقمية لدعم الكابتن خالد فهمي، رقم ٤، مع رؤية رياضية لخدمة أعضاء النادي.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>SwiftWarm × خالد فهمي | رقم ٤</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-ink text-slate-100 antialiased">
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-ink/85 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="التنقل الرئيسي">
-      <a class="flex items-center gap-3" href="#home" aria-label="Swiftwarm Sports Health">
-        <span class="brand-mark"><span></span></span>
-        <span><strong class="block text-sm tracking-[0.18em] text-mint">SWIFTWARM</strong><small class="block text-[10px] font-bold tracking-[0.2em] text-slate-300">SPORTS HEALTH</small></span>
-      </a>
-      <div class="hidden items-center gap-7 text-sm text-slate-400 md:flex">
-        <a href="#tests" class="nav-link">الاختبارات</a><a href="#play" class="nav-link">العب بذكاء</a><a href="#plans" class="nav-link">خطتك</a><a href="#election" class="nav-link">برنامج النادي</a>
-      </div>
-      <button id="openAi" class="button-mint rounded-xl px-4 py-2 text-xs font-black text-ink">اسأل Swiftwarm AI</button>
+<body>
+  <div class="bg-glow glow-a"></div><div class="bg-glow glow-b"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="SwiftWarm">
+      <span class="brand-mark"><i></i></span>
+      <span><b>SWIFTWARM</b><small>CREATIVE · DIGITAL · EXPERIENCE</small></span>
+    </a>
+    <nav>
+      <a href="#vision">الرؤية</a>
+      <a href="#tools">التجربة</a>
+      <a href="#about">عن خالد</a>
     </nav>
+    <button class="btn btn-mint header-cta" data-scroll="#election">اكتشف الفكرة</button>
   </header>
 
-  <main id="home" class="relative mx-auto max-w-7xl px-5 pb-20 pt-8 lg:px-8">
-    <section class="hero-grid grid items-center gap-8 rounded-[2rem] border border-white/10 bg-gradient-to-br from-panel to-navy p-6 shadow-2xl shadow-black/20 lg:grid-cols-[1.15fr_.85fr] lg:p-12">
-      <div>
-        <div class="mb-5 flex items-center gap-3 text-xs font-bold text-mint"><span class="status-dot"></span> مساحة أعضاء نادي التوفيقية</div>
-        <h1 class="max-w-2xl text-4xl font-black leading-tight sm:text-6xl">حرّك جسمك.<br /><span class="text-mint">درّب عقلك.</span></h1>
-        <p class="mt-5 max-w-xl text-base leading-8 text-slate-300">رحلة رياضية قصيرة وواضحة: اعرف جاهزيتك، اختر تحدياً يناسبك، وخذ خطوة واحدة قابلة للتنفيذ اليوم.</p>
-        <div class="mt-8 flex flex-wrap gap-3"><a href="#tests" class="button-gold rounded-xl px-5 py-3 text-sm font-black">ابدأ تقييمك <span>←</span></a><button id="heroAi" class="button-ghost rounded-xl px-5 py-3 text-sm font-bold">احتاج توجيهاً</button></div>
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="kicker"><span></span> تجربة رقمية من SWIFTWARM</div>
+        <h1>رياضة أقرب.<br><em>تجربة أذكى.</em></h1>
+        <p class="lead">صممنا هذه التجربة كمساحة تفاعلية تجمع الرياضة، التقنية، والمحتوى في واجهة واحدة — وتعرّفك برؤية الكابتن <strong>خالد فهمي</strong>، المرشح لعضوية مجلس الإدارة، <strong>رقم ٤</strong>.</p>
+        <div class="actions">
+          <button class="btn btn-gold" data-scroll="#election">رؤية البرنامج <span>←</span></button>
+          <button class="btn btn-ghost" id="openAi">جرّب SwiftWarm Smart</button>
+        </div>
+        <div class="proof-row">
+          <div><b>٤</b><span>رقم خالد</span></div>
+          <div><b>SPORTS</b><span>تجربة رياضية</span></div>
+          <div><b>SWIFTWARM</b><span>تصميم وتنفيذ</span></div>
+        </div>
       </div>
-      <div class="readiness-card relative overflow-hidden rounded-3xl border border-mint/30 bg-ink/50 p-7 text-center"><div class="ring mx-auto"><div><strong>78</strong><span>جاهزية اليوم</span></div></div><p class="mt-5 text-xs text-slate-400">بناءً على آخر تفاعل لك</p><div class="mt-5 grid grid-cols-3 gap-2 text-center"><div><strong class="text-lg text-gold">04</strong><small class="block text-[10px] text-slate-500">اختبارات</small></div><div><strong class="text-lg text-gold">12</strong><small class="block text-[10px] text-slate-500">دقيقة مقترحة</small></div><div><strong class="text-lg text-gold">+8%</strong><small class="block text-[10px] text-slate-500">هذا الأسبوع</small></div></div></div>
+      <div class="hero-card">
+        <div class="number-orbit"><span>٤</span></div>
+        <div class="hero-card-text"><b>خالد فهمي</b><span>مرشح عضوية مجلس الإدارة</span><small>خبرة رياضية بدأت من الملاعب وامتدت إلى العمل من أجل الأعضاء.</small></div>
+      </div>
     </section>
 
-    <section id="tests" class="section-space"><div class="section-heading"><div><span class="eyebrow">KNOW YOUR EDGE</span><h2>اختبارات لها معنى</h2></div><p>نتيجة واضحة، وخطوة تالية مفهومة.</p></div>
-      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4"><button class="test-card text-right" data-test="mental"><span class="icon-badge bg-lilac/15 text-lilac">◒</span><strong>الملعب الداخلي</strong><p>مرونتك النفسية تحت ضغط المنافسة.</p><small>3 أسئلة · نتيجة فورية</small></button><button class="test-card text-right" data-test="energy"><span class="icon-badge bg-mint/15 text-mint">↗</span><strong>مؤشر الطاقة</strong><p>هل تحتاج حركة أم تعافياً اليوم؟</p><small>دقيقتان · توصية يومية</small></button><button class="test-card text-right" data-test="tennis"><span class="icon-badge bg-gold/15 text-gold">◎</span><strong>جاهزية التنس</strong><p>تركيزك، سرعتك، واستعدادك للمباراة.</p><small>5 أسئلة · خطة إحماء</small></button><button class="test-card text-right" data-test="balance"><span class="icon-badge bg-sky-400/15 text-sky-300">⌁</span><strong>توازن العادة</strong><p>اكتشف العائق الذي يوقف استمراريتك.</p><small>4 أسئلة · تحدٍ شخصي</small></button></div>
+    <section id="vision" class="section container">
+      <div class="section-head"><div><small class="eyebrow">THE IDEA</small><h2>ليست دعاية فقط.</h2></div><p>الفكرة أن يرى العضو الخدمة قبل أن يسمع الوعد.</p></div>
+      <div class="vision-grid">
+        <article><span>01</span><h3>نشاط أسهل</h3><p>جداول وأنشطة واضحة، ومحتوى يساعد العضو على معرفة ماذا يفعل ومتى.</p></article>
+        <article><span>02</span><h3>تواصل أقرب</h3><p>اقتراحات وملاحظات تصل إلى الإدارة بصورة أبسط وأكثر مباشرة.</p></article>
+        <article><span>03</span><h3>رياضة للجميع</h3><p>رؤية تهتم بالناشئ، والشباب، والكبار، وبكل عضو يريد أن يتحرك ويستمتع.</p></article>
+      </div>
     </section>
 
-    <section id="play" class="section-space"><div class="section-heading"><div><span class="eyebrow">PLAY WITH PURPOSE</span><h2>لعبتان، تركيز أكثر</h2></div><p>مكافأة صغيرة تجعل العودة أسهل.</p></div><div class="grid gap-4 md:grid-cols-2"><article class="game-card mint-card"><div class="flex items-start justify-between"><span class="icon-badge bg-ink/30 text-mint">✦</span><strong id="tapScore" class="text-3xl text-mint">0</strong></div><h3>نبض التركيز</h3><p>اضغط على الزر 10 مرات قبل تمرينك. كل ضغطة تذكير بأن البداية قرار.</p><button id="focusTap" class="game-action text-mint">اضغط الآن ←</button></article><article class="game-card gold-card"><div class="flex items-start justify-between"><span class="icon-badge bg-ink/30 text-gold">↻</span><strong id="streakScore" class="text-3xl text-gold">0</strong></div><h3>مفاجأة اليوم</h3><p id="challengeText">تحدي تبديل اليد: 3 دقائق بيدك غير المعتادة.</p><button id="newChallenge" class="game-action text-gold">نشاط جديد ←</button></article></div></section>
+    <section id="tools" class="section container">
+      <div class="section-head"><div><small class="eyebrow">SWIFTWARM SMART</small><h2>جرّب التجربة.</h2></div><p>أدوات خفيفة للرياضة والتركيز — تعمل من الهاتف بدون الحاجة إلى كمبيوتر.</p></div>
+      <div class="tools-grid">
+        <button class="tool-card" data-test="mental"><span class="tool-icon">◒</span><b>الملعب الداخلي</b><small>3 أسئلة · نتيجة فورية</small></button>
+        <button class="tool-card" data-test="energy"><span class="tool-icon">↗</span><b>مؤشر الطاقة</b><small>دقيقتان · خطوة اليوم</small></button>
+        <button class="tool-card" data-test="tennis"><span class="tool-icon">◎</span><b>جاهزية التنس</b><small>5 أسئلة · إحماء مقترح</small></button>
+        <button class="tool-card" data-test="balance"><span class="tool-icon">⌁</span><b>توازن العادة</b><small>4 أسئلة · تحدٍ شخصي</small></button>
+      </div>
+    </section>
 
-    <section id="plans" class="section-space"><div class="section-heading"><div><span class="eyebrow">BODY DIRECTION</span><h2>برنامج يناسب هدفك</h2></div><p>خطة إرشادية تدريجية، وليست تشخيصاً طبياً.</p></div><div class="plan-tabs"><button class="plan-tab active" data-plan="loss">أريد تخفيف الوزن</button><button class="plan-tab" data-plan="gain">أريد زيادة الوزن</button><button class="plan-tab" data-plan="fitness">أريد لياقة أفضل</button></div><div id="planContent" class="plan-content"></div></section>
+    <section id="about" class="section container">
+      <div class="profile-card">
+        <div class="profile-number">٤</div>
+        <div>
+          <small class="eyebrow">THE CANDIDATE</small>
+          <h2>خالد فهمي</h2>
+          <p>رياضي صاحب تجربة من الملاعب؛ شارك في مرحلة الناشئين في قطر، ويحمل خبرة رياضية يريد تحويلها إلى خدمة عملية لأعضاء النادي.</p>
+          <div class="chips"><span>رياضة</span><span>ناشئون</span><span>خدمة الأعضاء</span><span>تواصل مباشر</span></div>
+        </div>
+      </div>
+    </section>
 
-    <section id="election" class="election-card grid gap-8 overflow-hidden rounded-[2rem] border border-gold/25 bg-gradient-to-br from-[#182D3A] to-[#0D1F2C] p-7 lg:grid-cols-[1fr_.75fr] lg:p-10"><div><span class="eyebrow text-gold">CLUB 2026 · رؤية لخدمة الأعضاء</span><h2 class="mt-3 max-w-xl text-3xl font-black leading-tight sm:text-5xl">نادي أقرب.<br /><span class="text-gold">رياضة أسهل.</span></h2><p class="mt-5 max-w-xl leading-8 text-slate-300">برنامج كابتن خالد فهمي يضع النشاط الرياضي في متناول كل عضو: جداول مفتوحة، اختبارات دورية، وتواصل مباشر يحوّل الاقتراح إلى فعل.</p><div class="mt-7 grid grid-cols-3 gap-4 border-t border-white/10 pt-5"><div><strong class="text-gold">01</strong><small class="mt-2 block text-xs text-slate-400">جدول أنشطة مفتوح</small></div><div><strong class="text-gold">02</strong><small class="mt-2 block text-xs text-slate-400">اختبارات دورية</small></div><div><strong class="text-gold">03</strong><small class="mt-2 block text-xs text-slate-400">صوت أقرب</small></div></div><button id="supportProgram" class="button-gold mt-7 rounded-xl px-5 py-3 text-sm font-black">أؤيد البرنامج</button><span id="supportMessage" class="mr-3 text-xs text-mint"></span></div><div class="campaign-placeholder"><div class="campaign-number">٤</div><strong>خالد فهمي</strong><span>عضو مجلس إدارة · خبرة رياضية · عمل من أجل الجميع</span></div></section>
-    <p class="mt-8 text-center text-xs leading-6 text-slate-500">الأدوات إرشادية ولا تستبدل التقييم الطبي أو النفسي المتخصص. عند وجود ألم أو دوخة أو أعراض مقلقة، أوقف النشاط وراجع مختصاً.</p>
+    <section id="election" class="section container">
+      <div class="campaign">
+        <div>
+          <small class="eyebrow gold">CLUB VISION · 2026</small>
+          <h2>نادي أقرب.<br><em>رياضة أسهل.</em></h2>
+          <p>ثلاثة محاور بسيطة: نشاط مفتوح، متابعة دورية، وصوت أقرب للعضو. الهدف ليس كثرة الشعارات، بل تحويل المقترح إلى تجربة يمكن قياسها.</p>
+          <div class="campaign-points"><div><b>01</b><span>جدول أنشطة واضح</span></div><div><b>02</b><span>اختبارات وتجارب دورية</span></div><div><b>03</b><span>تواصل مباشر مع الأعضاء</span></div></div>
+          <button id="supportProgram" class="btn btn-gold">أعجبني البرنامج</button>
+          <span id="supportMessage" class="support-msg"></span>
+        </div>
+        <div class="candidate-poster">
+          <div class="poster-number">٤</div>
+          <b>خالد فهمي</b>
+          <span>مرشح عضوية مجلس الإدارة</span>
+          <small>صوت رياضي · رؤية عملية</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container swiftwarm-section">
+      <div class="swiftwarm-lockup"><span class="brand-mark large"><i></i></span><div><b>SWIFTWARM</b><span>نحوّل الفكرة إلى تجربة.</span></div></div>
+      <p>هذه التجربة نموذج من حلول SwiftWarm الرقمية: تصميم، محتوى، تفاعل، وواجهة تصلح للحملة أو للعلامة أو للمشروع.</p>
+      <div class="service-row"><span>Digital Campaigns</span><span>Interactive Web</span><span>Creative Content</span><span>AI Experiences</span></div>
+    </section>
   </main>
 
-  <div id="testModal" class="modal hidden"><div class="modal-panel"><button class="close-modal" data-close="testModal">×</button><span class="eyebrow">QUICK ASSESSMENT</span><h2 id="modalTitle" class="mt-2 text-2xl font-black"></h2><div class="mt-4 flex items-center justify-between text-xs text-slate-400"><p id="modalQuestion" class="text-lg font-bold leading-8 text-slate-100"></p><span id="modalProgress" aria-live="polite"></span></div><div id="modalAnswers" class="mt-6 grid gap-3"></div><div id="modalResult" class="mt-5 hidden rounded-2xl bg-mint/10 p-4 text-sm leading-7 text-slate-200"></div></div></div>
-  <div id="aiModal" class="modal hidden"><div class="modal-panel"><button class="close-modal" data-close="aiModal">×</button><span class="eyebrow">SWIFTWARM AI</span><h2 class="mt-2 text-2xl font-black">ما خطوتك التالية؟</h2><p class="mt-3 text-sm leading-7 text-slate-400">مساعد عام للتوجيه الرياضي، لا يشخّص ولا يعالج.</p><div id="aiAnswer" class="mt-5 rounded-2xl bg-panel p-4 text-sm leading-7">اكتب سؤالك عن التدريب أو التعافي أو هدفك.</div><div class="mt-4 flex gap-2"><input id="aiInput" class="text-input" placeholder="مثال: كيف أبدأ بعد انقطاع؟" /><button id="sendAi" class="button-mint rounded-xl px-4 font-black text-ink">إرسال</button></div></div></div>
+  <footer><span>© 2026 SWIFTWARM</span><span>تجربة دعائية غير مرتبطة بإجراء انتخابي رسمي.</span></footer>
+
+  <div id="testModal" class="modal hidden" aria-hidden="true"><div class="modal-panel" role="dialog" aria-modal="true">
+    <button class="close-modal" data-close="testModal" aria-label="إغلاق">×</button>
+    <small class="eyebrow">QUICK ASSESSMENT</small><h2 id="modalTitle"></h2>
+    <div class="question-row"><p id="modalQuestion"></p><span id="modalProgress"></span></div>
+    <div id="modalAnswers" class="answers"></div><div id="modalResult" class="result hidden"></div>
+  </div></div>
+
+  <div id="aiModal" class="modal hidden" aria-hidden="true"><div class="modal-panel ai-panel" role="dialog" aria-modal="true">
+    <button class="close-modal" data-close="aiModal" aria-label="إغلاق">×</button>
+    <small class="eyebrow">SWIFTWARM SMART</small><h2>مساعدك الرياضي</h2>
+    <p class="modal-note">تجربة محلية سريعة — لا تشخّص ولا تعالج.</p>
+    <div id="aiAnswer" class="ai-answer">اسأل عن التدريب، التركيز، التعافي، أو كيف تبدأ بعد انقطاع.</div>
+    <div class="ai-input-row"><input id="aiInput" inputmode="text" autocomplete="off" placeholder="مثال: كيف أبدأ بعد انقطاع؟"><button id="sendAi" class="btn btn-mint">إرسال</button></div>
+    <div class="quick-asks"><button data-ask="كيف أبدأ بعد انقطاع؟">بعد انقطاع</button><button data-ask="كيف أحسن تركيزي؟">التركيز</button><button data-ask="أشعر بإجهاد اليوم">الإجهاد</button></div>
+  </div></div>
+
   <script src="./app.js"></script>
 </body>
 </html>
