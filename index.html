@@ -81,45 +81,37 @@
 
     
     <section id="discover" class="section container">
-      <div class="section-head"><div><small class="eyebrow">SWIFTWARM DISCOVER</small><h2>اكتشف نفسك الرياضية.</h2></div><p>مساحات قصيرة ومفيدة لكل مرحلة عمرية — بدون تشخيصات ولا شعارات فارغة.</p></div>
-      <div class="discover-grid">
-        <button class="discover-card kids" data-content="kids"><span class="discover-icon">⚽</span><b>اكتشف نفسك الرياضية</b><strong>للأطفال</strong><p>اختبار ممتع يكتشف ميول الطفل الرياضية وطريقة لعبه وتعاونه.</p><small>ابدأ الاكتشاف ←</small></button>
-        <button class="discover-card teens" data-content="teens"><span class="discover-icon">◉</span><b>الصحة النفسية للمراهق</b><strong>افهم نفسك قبل أن تحكم عليها</strong><p>مساحة توعوية عن الضغط والمقارنة والثقة وطلب الدعم — بلا تشخيص.</p><small>اكتشف الآن ←</small></button>
-        <button class="discover-card girls" data-content="girls"><span class="discover-icon">✦</span><b>فتيات رياضيات</b><strong>قوة وثقة ومساحة آمنة</strong><p>نصائح عملية للتدريب، الثقة، التوازن، والاستمرار في الرياضة.</p><small>شاهد المحتوى ←</small></button>
-        <button class="discover-card champions" data-content="champions"><span class="discover-icon">★</span><b>نصائح من الأبطال</b><strong>الخبرة التي تُنقل</strong><p>دروس قصيرة من عقلية المنافسة: الالتزام، الخسارة، العودة، والعمل الجماعي.</p><small>افتح مكتبة النصائح ←</small></button>
+      <div class="section-head"><div><small class="eyebrow">SWIFTWARM DISCOVER</small><h2>اكتشف نفسك الرياضية.</h2></div><p>أجب. جرّب. احصل على نتيجة. ثم خذ خطوة عملية.</p></div>
+      <div class="discover-grid interactive-discover">
+        <button class="discover-card kids" data-discover-test="kids"><span class="discover-icon">⚽</span><b>للأطفال</b><strong>أي لاعب أنت؟</strong><p>6 مواقف لعب تكشف ميلك: سرعة، مهارة، تعاون أم منافسة.</p><small>ابدأ الاختبار · 60 ثانية ←</small></button>
+        <button class="discover-card teens" data-discover-test="teens"><span class="discover-icon">◉</span><b>للمراهق</b><strong>كيف تتعامل مع الضغط؟</strong><p>5 مواقف من الحياة الرياضية تعطيك مؤشرًا بسيطًا عن طريقة تعاملك مع الضغط.</p><small>ابدأ الاختبار · 60 ثانية ←</small></button>
+        <button class="discover-card girls" data-discover-test="girls"><span class="discover-icon">✦</span><b>فتيات رياضيات</b><strong>ما أسلوبك الرياضي؟</strong><p>اختبار قصير عن الثقة، الاستمرارية، التدريب والتوازن.</p><small>اكتشفي أسلوبك ←</small></button>
+        <button class="discover-card champions" data-discover-test="champions"><span class="discover-icon">★</span><b>من عقلية الأبطال</b><strong>ماذا تفعل بعد الخسارة؟</strong><p>مواقف حقيقية في المنافسة. اختر ردك واكتشف عقلية لعبك.</p><small>اختبر قرارك ←</small></button>
       </div>
-      <div id="discoverPanel" class="discover-panel" aria-live="polite"></div>
+      <div id="discoverResult" class="discover-result" aria-live="polite"></div>
     </section>
 
     <section id="honor" class="section container">
-      <div class="section-head"><div><small class="eyebrow">CLUB LEGACY</small><h2>لوحة الشرف وإنجازات النادي.</h2></div><p>نحوّل تاريخ نادي التوفيقية للتنس وإنجازاته الموثقة إلى ذاكرة رقمية قابلة للعرض والتحديث.</p></div>
-      <div class="legacy-grid">
-        <div class="honor-card">
-          <div class="honor-head"><span>🏆</span><div><b>لوحة الشرف</b><small>أبطال يصنعون ذاكرة النادي</small></div></div>
-          <div class="honor-list">
-            <article><strong>الأبطال</strong><span>أسماء اللاعبين والفرق المتوجة</span></article>
-            <article><strong>المدربون</strong><span>أصحاب البصمة في صناعة الأجيال</span></article>
-            <article><strong>لحظات لا تُنسى</strong><span>صور ونتائج وقصص البطولات</span></article>
-          </div>
-          <button class="btn btn-gold" data-scroll="#achievements">استكشف السجل الرياضي ←</button>
-        </div>
-        <div id="achievements" class="achievements-card">
-          <div class="achievement-title"><span>🏅</span><div><b>إنجازات وبطولات النادي</b><small>سجل موثق — يُحدّث مع كل بطولة</small></div></div>
-          <div class="achievement-stats">
-  <div><strong>1896</strong><span>تأسيس النادي</span></div>
-  <div><strong>GA</strong><span>بطولات جمهورية مستضافة</span></div>
-  <div><strong>8</strong><span>ملاعب تنس حاليًا</span></div>
-  <div><strong>2</strong><span>ملعب بادل حاليًا</span></div>
-</div>
-<div class="verified-achievements">
-  <article><b>🏆 بطولة الجمهورية للتنس</b><span>استضاف النادي بطولة الجمهورية المصنفة GA، وهي أعلى تصنيف محلي في بطولات التنس وفق التغطيات المنشورة.</span></article>
-  <article><b>🌍 بطولات دولية وناشئين</b><span>استضافت ملاعب النادي بطولات دولية وفعاليات للناشئين، ضمن دوره كمنشأة تستضيف المنافسات.</span></article>
-  <article><b>🥈 إنجاز 2025 في اللياقة</b><span>حقق فريق التوفيقية المركز الثاني في الدرع العام لبطولة الجمهورية للياقة البدنية والتنافسية Egyfit 2025.</span></article>
-  <article><b>🎾 منصة للبطولات الكبرى</b><span>استضاف النادي نهائيات الدوري العام للتنس رجال وسيدات في 2025، ما يؤكد جاهزية ملاعبه لاستضافة المنافسات الكبرى.</span></article>
-</div>
-<div class="verification-note"><b>توثيق قبل التفاخر.</b><p>هذه اللوحة تعرض ما أمكن التحقق منه من المصادر المنشورة، ولا ننسب للنادي بطولة لمجرد أنه استضافها. ويمكن إضافة سجل البطولات التي فاز بها لاعبو النادي بعد تزويدنا بالسجل الرسمي للنادي.</p></div>
-        </div>
+      <div class="section-head"><div><small class="eyebrow">CLUB LEGACY · 1896</small><h2>لوحة الشرف ليست قائمة أسماء.</h2></div><p>اختَر سنة أو حدثًا. افتح القصة. شاهد ما الذي صنعه النادي.</p></div>
+      <div class="legacy-controls">
+        <button class="legacy-filter active" data-legacy="all">كل الحكاية</button>
+        <button class="legacy-filter" data-legacy="1896">1896</button>
+        <button class="legacy-filter" data-legacy="2020">2020</button>
+        <button class="legacy-filter" data-legacy="2021">2021</button>
+        <button class="legacy-filter" data-legacy="2022">2022</button>
+        <button class="legacy-filter" data-legacy="2025">2025</button>
       </div>
+      <div id="legacyStory" class="legacy-story">
+        <div class="story-main"><span class="story-year">1896</span><h3>من أين بدأت الحكاية؟</h3><p>نادي التوفيقية أُنشئ عام 1896 ويُوصف في المصادر المنشورة بأنه من أقدم أندية التنس في مصر. بدل عرض التاريخ كخبر، ابدأ من السنة واكتشف كيف تحولت المنشأة إلى مساحة للمنافسة وصناعة الأجيال.</p><button class="btn btn-gold" data-legacy-open="2021">التالي في الحكاية ←</button></div>
+        <div class="story-side"><div class="story-stat"><b>1896</b><span>بداية النادي</span></div><div class="story-stat"><b>9</b><span>ملاعب استُخدمت في بطولة 2020</span></div><div class="story-stat"><b>20</b><span>دولة شاركت في بطولة دولية 2021</span></div></div>
+      </div>
+      <div class="legacy-cards">
+        <button data-legacy-open="2020"><b>2020 · 3000+ لاعب</b><span>بطولة مفتوحة ضخمة على ملاعب التوفيقية.</span></button>
+        <button data-legacy-open="2021"><b>2021 · العالم على الملاعب</b><span>بطولة دولية للناشئين والناشئات بمشاركة 20 دولة.</span></button>
+        <button data-legacy-open="2022"><b>2022 · الناشئون</b><span>بطولة دولية تحت 18 سنة بمشاركة 120 لاعبًا ولاعبة.</span></button>
+        <button data-legacy-open="2025"><b>2025 · النادي يصنع الأبطال</b><span>التقرير السنوي يوثق نتائج وميداليات في عدة ألعاب.</span></button>
+      </div>
+      <div class="verification-note"><b>نفرق بين «استضاف» و«فاز».</b><p>المعلومات أعلاه موثقة من تقارير وتغطيات منشورة. لا ننسب للنادي لقبًا لمجرد أن البطولة أقيمت على ملاعبه.</p></div>
     </section>
 
     <section id="plans" class="section container">
