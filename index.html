@@ -19,7 +19,7 @@
     </a>
     <nav>
       <a href="#vision">الرؤية</a>
-      <a href="#tools">التجربة</a>
+      <a href="#tools">التجربة</a><a href="#plans">خطتك</a>
       <a href="#about">عن خالد</a>
     </nav>
     <button class="btn btn-mint header-cta" data-scroll="#election">البرنامج الانتخابي</button>
@@ -59,11 +59,23 @@
     <section id="tools" class="section container">
       <div class="section-head"><div><small class="eyebrow">SWIFTWARM EXPERIENCE</small><h2>جرّب التجربة.</h2></div><p>أدوات تفاعلية صممتها SwiftWarm لتجعل الحملة تجربة تُستخدم، لا مجرد إعلان يُشاهد.</p></div>
       <div class="tools-grid">
-        <button class="tool-card" data-test="mental"><span class="tool-icon">◒</span><b>الملعب الداخلي</b><small>3 أسئلة · نتيجة فورية · ابدأ ←</small></button>
-        <button class="tool-card" data-test="energy"><span class="tool-icon">↗</span><b>مؤشر الطاقة</b><small>3 أسئلة · نتيجة فورية · ابدأ ←</small></button>
-        <button class="tool-card" data-test="tennis"><span class="tool-icon">◎</span><b>جاهزية التنس</b><small>5 أسئلة · نتيجة فورية · ابدأ ←</small></button>
-        <button class="tool-card" data-test="balance"><span class="tool-icon">⌁</span><b>توازن العادة</b><small>4 أسئلة · نتيجة فورية · ابدأ ←</small></button>
+        <button class="tool-card" data-test="mental"><span class="tool-icon">◒</span><b>الملعب الداخلي</b><p>كيف تتصرف تحت ضغط المنافسة؟</p><small>5 أسئلة · تحليل فوري</small></button>
+        <button class="tool-card" data-test="energy"><span class="tool-icon">↗</span><b>مؤشر الطاقة</b><p>هل يومك يحتاج حركة أم استشفاء؟</p><small>5 أسئلة · خطة اليوم</small></button>
+        <button class="tool-card" data-test="tennis"><span class="tool-icon">◎</span><b>جاهزية التنس</b><p>استعدادك قبل دخول الملعب.</p><small>5 أسئلة · توصية تدريب</small></button>
+        <button class="tool-card" data-test="balance"><span class="tool-icon">⌁</span><b>توازن العادة</b><p>ما الذي يعطل استمرارك؟</p><small>5 أسئلة · تحدٍ لمدة 7 أيام</small></button>
+        <button class="tool-card feature-card" data-test="nutrition"><span class="tool-icon">◈</span><b>بوصلة التغذية</b><p>اختر هدفك وخذ نموذج يوم غذائي متوازن.</p><small>3 أهداف · اقتراحات عملية</small></button>
       </div>
+    </section>
+
+    
+    <section id="plans" class="section container">
+      <div class="section-head"><div><small class="eyebrow">SMART ROUTINE</small><h2>خطتك تبدأ من هدفك.</h2></div><p>اختيارات إرشادية عامة؛ لا تستبدل تقييم مختص التغذية عند الحاجة.</p></div>
+      <div class="plan-tabs">
+        <button class="plan-tab active" data-plan="loss">أريد تخفيف الوزن</button>
+        <button class="plan-tab" data-plan="gain">أريد زيادة الوزن</button>
+        <button class="plan-tab" data-plan="fitness">أريد لياقة أفضل</button>
+      </div>
+      <div id="planContent" class="plan-content"></div>
     </section>
 
     <section id="about" class="section container">
