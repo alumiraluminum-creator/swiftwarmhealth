@@ -85,3 +85,6 @@ function renderLegacy(key){const d=legacyData[key]||legacyData.all;$('legacyStor
 document.querySelectorAll('.legacy-filter').forEach(b=>b.onclick=()=>renderLegacy(b.dataset.legacy));
 document.querySelectorAll('[data-legacy-open]').forEach(b=>b.onclick=()=>renderLegacy(b.dataset.legacyOpen));
 renderLegacy('all');
+
+const memberVision=$('memberVision'),visionCount=$('visionCount'),visionSubmit=$('visionSubmit'),visionThanks=$('visionThanks');
+if(memberVision){memberVision.addEventListener('input',()=>visionCount.textContent=memberVision.value.length+' / 500');visionSubmit.addEventListener('click',()=>{if(!memberVision.value.trim()){memberVision.focus();return}visionThanks.classList.remove('hidden');visionSubmit.textContent='تم استلام مشاركتك ✓';visionSubmit.disabled=true})}
