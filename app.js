@@ -6,6 +6,7 @@ balance:{title:'توازن العادة',questions:['لدي وقت محدد أس
 };
 const $=id=>document.getElementById(id);let currentTest=null,currentIndex=0,score=0;
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+function openModal(id){const m=$(id);if(!m)return;m.classList.remove('hidden');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
 function closeModal(id){const m=$(id);if(!m)return;m.classList.add('hidden');m.setAttribute('aria-hidden','true');if(!document.querySelector('.modal:not(.hidden)'))document.body.style.overflow=''}
 function renderTest(key){currentTest=tests[key];if(!currentTest)return;currentIndex=0;score=0;$('modalTitle').textContent=currentTest.title;$('modalResult').classList.add('hidden');renderQuestion();openModal('testModal')}
 function renderQuestion(){const total=currentTest.questions.length;$('modalQuestion').textContent=currentTest.questions[currentIndex];$('modalProgress').textContent=(currentIndex+1)+' / '+total;$('modalAnswers').innerHTML='<button class="answer-choice" data-score="1">غالباً</button><button class="answer-choice" data-score="0">أحتاج تدريباً</button>';$('modalAnswers').querySelectorAll('button').forEach(b=>b.onclick=()=>{score+=Number(b.dataset.score);if(currentIndex<total-1){currentIndex++;renderQuestion()}else showResult()})}
