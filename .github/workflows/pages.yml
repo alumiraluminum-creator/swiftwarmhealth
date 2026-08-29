@@ -1,4 +1,4 @@
-name: Deploy Swiftwarm Health to GitHub Pages
+name: Deploy SwiftWarm Health to GitHub Pages
 
 on:
   push:
@@ -21,10 +21,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Configure Pages
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
