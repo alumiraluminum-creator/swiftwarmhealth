@@ -51,3 +51,11 @@ document.querySelectorAll('.modal').forEach(m=>m.onclick=e=>{if(e.target===m)clo
 document.onkeydown=e=>{if(e.key==='Escape')document.querySelectorAll('.modal:not(.hidden)').forEach(m=>closeModal(m.id))};
 $('supportProgram')?.addEventListener('click',()=>{$('programDetails')?.scrollIntoView({behavior:'smooth',block:'start'});$('supportMessage').textContent='هذه هي المحاور بالتفصيل — اقرأها ثم كوّن رأيك.'});
 showPlan(store.get('swiftwarm:plan','loss'));
+
+const discoverContent={
+ kids:{title:'اكتشف نفسك الرياضية — للأطفال',text:'تجربة خفيفة تساعد الطفل على اكتشاف ما يحبه في الرياضة: المنافسة، الحركة، التعاون أو المهارة. لا توجد إجابة صحيحة وأخرى خاطئة.',points:[['الميل الرياضي','هل تستمتع بالحركة واللعب أم المهارات الدقيقة؟'],['روح الفريق','كيف تتعامل مع زملائك عندما تفوز أو تخسر؟'],['الخطوة التالية','اختيار نشاط مناسب وتجربته قبل الحكم عليه.']]},
+ teens:{title:'الصحة النفسية للمراهق',text:'مساحة توعوية لفهم الضغط الرياضي، المقارنة، الخوف من الفشل والثقة بالنفس. لا يقدم التطبيق تشخيصاً؛ وعند الضيق المستمر أو الخطر يجب طلب دعم من شخص بالغ موثوق أو مختص.',points:[['الضغط','التفريق بين ضغط يحفزك وضغط يستنزفك.'],['المقارنة','نتيجتك ليست قيمة شخصيتك.'],['طلب الدعم','الكلام مع شخص موثوق قوة وليس ضعفاً.']]},
+ girls:{title:'فتيات رياضيات',text:'محتوى يحترم خصوصية الفتاة ويضع الرياضة في مكانها الطبيعي: قوة، صحة، ثقة، مهارة واستمرارية.',points:[['الثقة','قيسي تقدمك بأدائك لا بمظهر الآخرين.'],['التدريب','التدرج والإحماء والتعافي جزء من الإنجاز.'],['الاستمرارية','اختاري بيئة تشجعك وتحترم حدودك.']]},
+ champions:{title:'نصائح من الأبطال',text:'مكتبة قصيرة مبنية على عقلية المنافسة، ويمكن لاحقاً ربط كل بطاقة ببطل حقيقي من النادي بعد توثيق الاسم والبطولة.',points:[['قبل المنافسة','استعد لما يمكنك التحكم فيه.'],['بعد الخسارة','حلل الأداء ثم عد للتدريب.'],['بعد الفوز','احفظ التواضع وواصل البناء.']]}
+};
+document.querySelectorAll('[data-content]').forEach(b=>b.onclick=()=>{const d=discoverContent[b.dataset.content];$('discoverPanel').innerHTML='<h3>'+d.title+'</h3><p>'+d.text+'</p><div class="discover-points">'+d.points.map(x=>'<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div>';$('discoverPanel').classList.add('show');$('discoverPanel').scrollIntoView({behavior:'smooth',block:'nearest'})});
